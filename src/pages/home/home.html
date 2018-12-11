@@ -3,21 +3,30 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>LOGIN</h3>
 
-  <ion-list>
-    <ion-item>
-      <ion-label stacked>Username</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-    <ion-item>
 
-      <ion-label stacked>Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  </ion-list>
+    <ion-card>
+        <img src="../assets/imgs/gabaritei-logo.png"/>
+        <ion-card-content>
+          
+        </ion-card-content>
+        <ion-list>
+            <ion-item>
+              <ion-label stacked></ion-label>
+              <ion-input type="text" placeholder="Login"></ion-input>
+            </ion-item>
+            <ion-item>
+        
+              <ion-label stacked></ion-label>
+              <ion-input type="password" placeholder="Senha"></ion-input>
+            </ion-item>
+          </ion-list>
+        
+          <button ion-button block (click)="login()">ENTRAR</button>
+          <button ion-button block outline>REGISTRAR</button>
+      </ion-card>
+  
 
-  <button ion-button block (click)="login()">ENTRAR</button>
-  <button ion-button block outline>REGISTRAR</button>
+  
 
 </ion-content>
