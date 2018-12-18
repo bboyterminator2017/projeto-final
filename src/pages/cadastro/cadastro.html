@@ -1,5 +1,5 @@
 <!--
-  Generated template for the CadastroPage page.
+  Generated template for the NovoClientePage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,12 +7,45 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>cadastro</ion-title>
+    
+    <ion-title><ion-icon name="md-arrow-back"></ion-icon>
+
+    Cadastro</ion-title>
+  
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+<form [formGroup]="formGroup" (ngSubmit)="cadastrar(); $event.preventDefault()">
+  
+  <ion-item>
+    <ion-label stacked>Nome*</ion-label>
+    <ion-input formControlName="nome" type="text"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label stacked>E-mail*</ion-label>
+    <ion-input formControlName="email" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Login*</ion-label>
+    <ion-input formControlName="login" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Senha*</ion-label>
+    <ion-input formControlName="senha" type="text"></ion-input>
+  </ion-item>
+
+
+    
+  
+    <button ion-button block type="submit" [disabled]="formGroup.invalid">Criar conta</button>
+  </form>
 
 </ion-content>
+
+
