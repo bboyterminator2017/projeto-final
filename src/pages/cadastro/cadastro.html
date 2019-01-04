@@ -7,10 +7,11 @@
 <ion-header>
 
   <ion-navbar>
-    
-    <ion-title><ion-icon name="md-arrow-back"></ion-icon>
+  
 
-    Cadastro</ion-title>
+    
+      <ion-title><ion-icon name="md-arrow-back" (click)="goBack()"></ion-icon>Cadastro</ion-title>
+    
   
   </ion-navbar>
 
@@ -18,6 +19,9 @@
 
 
 <ion-content padding>
+
+  <h3>Cadastre-se aqui e tenha acesso ao nosso conteúdo!</h3>
+  <fieldset>
 <form [formGroup]="formGroup" (ngSubmit)="cadastrar(); $event.preventDefault()">
   
   <ion-item>
@@ -45,7 +49,7 @@
   
     <button ion-button block type="submit" [disabled]="formGroup.invalid">Criar conta</button>
   </form>
-
+</fieldset>
 </ion-content>
 
 

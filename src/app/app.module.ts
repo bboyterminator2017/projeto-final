@@ -10,6 +10,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroService } from '../service/cadastro.service';
+import { HomeModule } from '../pages/home/home.module';
+import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CadastroService } from '../service/cadastro.service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    HomeModule,
+    CadastroPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

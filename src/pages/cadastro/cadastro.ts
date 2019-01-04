@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CadastroService } from '../../service/cadastro.service';
+import { HomePage } from '../home/home';
 
 
 @IonicPage()
@@ -45,5 +46,9 @@ export class CadastroPage {
         console.log(error);
       }
     );
+  }
+
+  goBack(){
+    this.navCtrl.push(HomePage);
   }
 }
